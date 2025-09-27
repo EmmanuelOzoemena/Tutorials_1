@@ -1,0 +1,108 @@
+
+
+### ✅ **WEEKLY SCHEME OF WORK — HTML, CSS & JavaScript (BASICS)**
+
+#### 🟨 **WEEK 1: Introduction to Web Development & HTML Basics**
+
+* What is web development? (Frontend vs Backend)
+* Tools setup: Code editor (VS Code), browser, live server extension
+* Introduction to HTML
+
+  * Structure of an HTML document
+  * Basic tags: `<!DOCTYPE>`, `<html>`, `<head>`, `<body>`
+  * Text tags: `<h1> to <h6>`, `<p>`, `<strong>`, `<em>`, `<br>`, `<hr>`
+  * Lists: `<ul>`, `<ol>`, `<li>`
+  * Links: `<a href="">`
+  * Images: `<img src="" alt="">`
+
+**Project:** Create a basic profile page using headings, paragraphs, image, and links.
+
+---
+
+#### 🟨 **WEEK 2: More HTML + Intro to CSS**
+
+* HTML tables: `<table>`, `<tr>`, `<td>`, `<th>`, `colspan`, `rowspan`
+* Forms (Basic intro): `<form>`, `<input>`, `<label>`, `<button>`
+* Introduction to CSS
+
+  * What is CSS?
+  * Inline, internal, and external CSS
+  * CSS syntax: selectors, properties, values
+  * Styling text: `color`, `font-size`, `font-family`, `text-align`
+  * Backgrounds and borders
+
+**Project:** Build a mini contact form with basic CSS styling
+
+---
+
+#### 🟨 **WEEK 3: CSS Layout & Box Model**
+
+* The Box Model explained: `margin`, `padding`, `border`, `content`
+* Width, height, and `max-width`
+* Display types: `block`, `inline`, `inline-block`
+* `position`: `static`, `relative`, `absolute`, `fixed`
+* `float` and `clear`
+* Introduction to `flexbox`: `display: flex`, `justify-content`, `align-items`, `gap`
+
+**Project:** Design a basic 2-column layout webpage (about page or simple blog layout)
+
+---
+
+#### 🟨 **WEEK 4: JavaScript Basics**
+
+* What is JavaScript and why it’s used
+* Linking JS to HTML (`<script>`)
+* Variables (`let`, `const`)
+* Data types: string, number, boolean, null, undefined
+* Basic operators: `+`, `-`, `*`, `/`, `%`
+* `alert()`, `console.log()`, `prompt()`
+* Simple functions
+
+**Mini Practice:** Ask the user for their name using `prompt()` and greet them.
+
+---
+
+#### 🟨 **WEEK 5: Control Structures + DOM Intro**
+
+* `if`, `else if`, `else`
+* `switch` statements
+* Comparison & logical operators
+* Loops: `for`, `while`
+* Introduction to the DOM
+
+  * `getElementById`, `getElementsByClassName`, `querySelector`
+  * Changing text and styles with JS
+  * Adding event listeners (`onclick`, `onchange`)
+
+**Project:** Build a mini calculator or color changer
+
+---
+
+#### 🟨 **WEEK 6: Putting it all together**
+
+* Practice building a simple web page using HTML, CSS, and JS
+* Responsive design basics: `media queries`
+* File/folder organization
+* Hosting with GitHub Pages (bonus)
+
+**Final Project:** Build a simple portfolio site with:
+
+* About Me section (HTML)
+* Styled layout (CSS)
+* A contact form and simple interactivity (JS)
+
+---
+
+### 💡 TIPS:
+
+* Don’t overload one class. Let them **practice more than they watch**.
+* Use real-life examples (e.g., “Let’s build a birthday card page”).
+* Keep it interactive — ask questions and review past lessons every week.
+
+---
+
+If you like, I can create **PDF slides** or **practice sheets** based on each week's lesson. Just say the word. 💪🏾
+
+Let me know if you want to extend it to more advanced levels too.
+
+https://github.com/EmmanuelOzoemena/social-link-profile  - project link

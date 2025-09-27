@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Property</title>
+
+    <style>
+      .ebuka-btn {
+        display: block;
+      }
+
+      p {
+        display: inline;
+      }
+
+      .goodness-btn {
+        display: none;
+      }
+
+      h3 {
+        /* visibility: hidden; */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Display Property</h2>
+
+    <p>Lorem, ipsum.</p>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, animi.
+    </p>
+
+    <button class="ebuka-btn">Ebuka</button>
+    <button class="goodness-btn">Goodness</button>
+
+    <p class="show"></p>
+
+    <h3>Hello World</h3>
+
+    <script>
+      const btn = document.querySelector(".ebuka-btn");
+
+      const show = document.querySelector(".show");
+
+      btn.addEventListener("click", () => {
+        show.innerHTML = "You clicked the Ebuka button";
+      });
+    </script>
+  </body>
+</html>
