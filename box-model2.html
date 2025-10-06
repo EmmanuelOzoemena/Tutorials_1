@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Model 2</title>
+
+    <style>
+      .box {
+        width: 300px;
+        height: 200px;
+        border: 1px solid red;
+        background-color: lightblue;
+        margin: 20px;
+        padding: 20px 39px;
+      }
+
+      .box2 {
+        width: 50px;
+        height: 50px;
+        border: 5px solid green;
+        background-color: green;
+
+        transition: all 0.3s ease;
+      }
+
+      .box2:hover {
+        opacity: 0.5;
+      }
+
+      .rgb-text {
+        color: rgba(78, 140, 212, 0.966);
+      }
+
+      .hex-text {
+        color: #e00ef3;
+      }
+
+      .hsl-text {
+        color: hsla(12, 89%, 52%, 0.712);
+      }
+
+    </style>
+  </head>
+  <body>
+    <h4>BOX MODEL & COLORS</h4>
+
+    <div class="box">
+      <div class="box2"></div>
+    </div>
+
+    <p style="color: green">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+
+    <p class="rgb-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum suscipit praesentium eum laboriosam dolor reprehenderit beatae repellat nihil nam animi!</p>
+
+    <p class="hex-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto possimus quibusdam, illo, at nemo ullam cum distinctio quasi quia eligendi adipisci dolore accusantium harum repellendus labore provident! Est, optio eos.</p>
+
+    <p class="hsl-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At corporis doloribus quas, ullam, consequuntur nisi eum dolore sit error pariatur dolorem mollitia placeat.</p>
+  </body>
+</html>
