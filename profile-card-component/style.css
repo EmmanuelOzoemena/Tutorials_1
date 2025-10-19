@@ -100,4 +100,8 @@ body {
   color: var(--attribution);
 }
 
-
+@media (max-width: 390px) {
+  .container {
+    width: 315px;
+  }
+}
