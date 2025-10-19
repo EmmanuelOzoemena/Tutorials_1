@@ -69,6 +69,7 @@ body {
 .profile img {
   border: 5px solid white;
   border-radius: 50%;
+  margin-bottom: 8px;
 }
 
 .profile span {
