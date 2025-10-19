@@ -1,10 +1,3 @@
-console.log("Active!");
-console.log("Active!");
-
-const followerCount = document.getElementById("followers");
-const likesCount = document.getElementById("likes");
-const photosCount = document.getElementById("photos");
-
 window.addEventListener("load", () => {
   const counters = [
     {
