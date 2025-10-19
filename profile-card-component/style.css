@@ -74,6 +74,7 @@ body {
 
 .profile span {
   color: var(--gray-500);
+  margin-left: 4px;
 }
 
 .social-counts {
