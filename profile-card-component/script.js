@@ -32,10 +32,17 @@ window.addEventListener("load", () => {
         element.textContent = Math.ceil(count);
         requestAnimationFrame(updateCount);
       } else {
-        element.textContent = counter.target;
+        element.textContent = formatNumber(counter.target);
       }
     };
 
     updateCount();
   });
+
+  // Function to format number like 80k, 1.4k
+  function formatNumber(num) {
+    if (num >= 1000000)
+      return (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    if (num >= 1000) return (num / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+  }
 });
