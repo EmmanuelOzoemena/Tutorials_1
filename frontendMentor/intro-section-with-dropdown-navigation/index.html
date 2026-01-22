@@ -1,39 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  Features
-  Company
-  Careers
-  About
+    <!-- TailwindCSS Play CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-  Login
-  Register
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style type="text/tailwindcss">
+      @theme {
+        --font-display: "Epilogue", sans-serif;
 
-  Make remote work
+        --color-gray-50: hsl(0, 0%, 98%);
+        --color-gray-500: hsl(0, 0%, 41%);
+        --color-gray-950: hsl(0, 0%, 8%);
+      }
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body class="font-display text-lg">
+    <header class="flex items-center justify-between p-8">
+      <nav class="flex">
+        <div class="mr-15 cursor-pointer">
+          <img src="./images/logo.svg" alt="logo" />
+        </div>
+
+        <ul class="flex gap-x-8 text-gray-500 font-bold">
+          <li class="flex items-center gap-x-2 cursor-pointer">
+            Features
+            <span
+              ><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"
+            /></span>
+          </li>
+          <li class="flex items-center gap-x-2 cursor-pointer">
+            Company
+            <span
+              ><img src="./images/icon-arrow-down.svg" alt="icon-arrow-down"
+            /></span>
+          </li>
+          <li class="cursor-pointer">Careers</li>
+          <li class="cursor-pointer">About</li>
+        </ul>
+      </nav>
+
+      <div class="flex gap-x-8 text-gray-500 font-medium">
+        <button class="cursor-pointer">Login</button>
+        <button
+          class="border-2 rounded-xl border-gray-500 px-6 py-1 cursor-pointer"
+        >
+          Register
+        </button>
+      </div>
+    </header>
+
+   
+
+    <!--
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
 </html>
