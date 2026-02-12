@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-tutorial",
+  "version": "1.0.0",
+  "main": "file.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1",
+    "lodash": "^4.17.23"
+  }
+}
