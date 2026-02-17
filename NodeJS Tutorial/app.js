@@ -1,4 +1,5 @@
 const express = require("express");
+const morgan = require("morgan");
 
 // Express app
 const app = express();
@@ -10,6 +11,10 @@ app.set("view engine", "ejs");
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
+
+// Middleware & static file (eg. CSS, images that'll be made public)
+app.use(express.static("public"));
+app.use(morgan("dev"));
 
 app.get("/", (req, res) => {
   //   res.send("<h2>Hello World!</h2>");
