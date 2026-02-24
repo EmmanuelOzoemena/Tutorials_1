@@ -1,20 +1,71 @@
+dotenv = require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
+const mongoose = require("mongoose");
+const Blog = require("./models/model");
 
 // Express app
 const app = express();
 
 // Register view engine
-app.set("view engine", "ejs");
 
-// Listen for request
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
+// Mongoose & connect to MongoDB
+mongoose
+  .connect(process.env.dbURI)
+  .then(() => {
+    console.log("Connected to MongoDB");
+    app.listen(3000);
+  })
+  .catch(() => {
+    console.log("Error connecting to MongoDB");
+  });
+
+// View engine setup
+app.set("view engine", "ejs");
 
 // Middleware & static file (eg. CSS, images that'll be made public)
 app.use(express.static("public"));
 app.use(morgan("dev"));
+
+// Routes
+app.get("/add-blog", (req, res) => {
+  const blog = new Blog({
+    title: "New Blog 2",
+    snippet: "About my second blog",
+    body: "More about my second blog",
+  });
+
+  blog
+    .save()
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// All Blogs
+app.get("/all-blogs", (req, res) => {
+  Blog.find()
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
+// Single Blog
+app.get("/single-blog", (req, res) => {
+  Blog.findById("699d6a064569094afbcd51ae")
+    .then((result) => {
+      res.send(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 app.get("/", (req, res) => {
   //   res.send("<h2>Hello World!</h2>");
