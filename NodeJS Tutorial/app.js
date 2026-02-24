@@ -28,44 +28,6 @@ app.use(express.static("public"));
 app.use(morgan("dev"));
 
 // Routes
-app.get("/add-blog", (req, res) => {
-  const blog = new Blog({
-    title: "New Blog 2",
-    snippet: "About my second blog",
-    body: "More about my second blog",
-  });
-
-  blog
-    .save()
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// All Blogs
-app.get("/all-blogs", (req, res) => {
-  Blog.find()
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// Single Blog
-app.get("/single-blog", (req, res) => {
-  Blog.findById("699d6a064569094afbcd51ae")
-    .then((result) => {
-      res.send(result);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
 
 app.get("/", (req, res) => {
   //   res.send("<h2>Hello World!</h2>");
