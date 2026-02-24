@@ -2,7 +2,8 @@ dotenv = require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const Blog = require("./models/model");
+
+const blogRoutes = require("./routes/blogRoutes")
 
 // Express app
 const app = express();
@@ -16,8 +17,8 @@ mongoose
     console.log("Connected to MongoDB");
     app.listen(3000);
   })
-  .catch(() => {
-    console.log("Error connecting to MongoDB");
+  .catch((err) => {
+    console.log("Error connecting to MongoDB", err );
   });
 
 // View engine setup
@@ -33,67 +34,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  //   res.send("<h2>About Page</h2>");
-  // res.sendFile("./views/about.html", { root: __dirname });
   res.render("about", { title: "About" });
 });
 
 // Blog routes
-
-app.get("/blogs/create", (req, res) => {
-  res.render("create", { title: "Create a new Blog" });
-});
-
-app.get("/blogs", (req, res) => {
-  Blog.find()
-    .sort({ createdAt: -1 })
-    .then((result) => {
-      res.render("index", { title: "All Blogs", blogs: result });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// create a blog
-app.post("/blogs", (req, res) => {
-  const blog = new Blog(req.body);
-
-  blog
-    .save()
-    .then((result) => {
-      res.redirect("/blogs");
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// Get a single blog
-app.get("/blogs/:id", (req, res) => {
-  const id = req.params.id;
-
-  Blog.findById(id)
-    .then((result) => {
-      res.render("details", { blog: result, title: "Blog Details" });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
-
-// Delet a blog
-app.delete("/blogs/:id", (req, res) => {
-  const id = req.params.id;
-
-  Blog.findByIdAndDelete(id)
-    .then((result) => {
-      res.json({ redirect: "/blogs" });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+app.use("/blogs", blogRoutes);
 
 // 404 page
 app.use((req, res) => {
